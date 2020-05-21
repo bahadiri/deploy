@@ -1,0 +1,4 @@
+pg_version: 10
+database_user: qmic
+database_name: qmic
+database_password: Haydin
