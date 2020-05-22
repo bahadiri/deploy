@@ -1,0 +1,13 @@
+---
+- hosts: default  # The default Vagrant box
+  become: yes
+  vars:
+    venv_dir: /home/vagrant/venv
+    requirements_file: /vagrant/requirements.txt
+    username: qmic
+    ssh_authorized_key: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAsuDLNBEQLtZVN8CQ3+gSgCeC3tkEUX1yivz/pinmpJHNPUiKKAmFvv43FS3rmlihjauL7SrCGCG9pu8uADKZgJvGLRDjLRkbe96bbpaLNWaoJ1AWghfZxLVZRdItlxLN7Ferw58tCfjVdjEjrG3ftlTdeStJ5L3X6wbO9GBGLZTivGmInVJVnuG47zrVROiD4Z5krTKGOMz8+OWkMwa7wlXQDNP+TN7by8rqDchENJmoVTgaIj64WdmBCd9O4WdR6nmN4TAakHLEifBvF//nrzcQnw3l8yvwPIrGmpojPdmCDCVFhy3xpaQTXyTziyLR2TSgK3TvH8HdsSWDOg73fw== qMic
+  roles:
+    - { role: common }
+    - { role: db }
+    - { role: python, }
+    - { role: user }
